@@ -12,7 +12,7 @@ const initialState = {
     }
 };
 
-const headerReducer = (state = initialState, action) => {
+const BooksReducer = (state = initialState, action) => {
     switch(action.type) {
         case GET_POSTS_BY_ID_REQUEST:
             return {
@@ -30,7 +30,7 @@ const headerReducer = (state = initialState, action) => {
                     isLoading: false,
                     error: false,
                     data: action.payload
-                }
+                },
             }
         case GET_POSTS_BY_ID_FAIL:
             return {
@@ -45,4 +45,4 @@ const headerReducer = (state = initialState, action) => {
     }
 }
 
-export default headerReducer;
+export default BooksReducer;
