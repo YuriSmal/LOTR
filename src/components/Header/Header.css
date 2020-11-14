@@ -1,0 +1,20 @@
+.header{
+    width: 100%;
+    background-color: black;
+}
+
+.header_container{
+    max-width: 1400px;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px 25px 0px;
+}
+.header_form_button{
+    height: 30px;
+}
+.header_form_input{
+    margin-left: 20px;
+    height: 30px;
+    width: 250px;
+}
