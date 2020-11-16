@@ -1,4 +1,18 @@
-.Main-Container{
-    height: 700px;
+.main-container{
+    height: 100vh;
     background-color: cornflowerblue;
+}
+
+.main-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23%;
 }

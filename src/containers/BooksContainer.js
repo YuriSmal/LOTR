@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { getBookFunc } from '../actions/books'
+import { getBookFunc } from '../actions/actions'
 import Books from '../components/Books/Books'
 import { books } from '../reducers'
 
@@ -12,7 +12,7 @@ const BooksContainer = ({ books, getBookInfo }) => (
 )
 
 const mapStateToProps = (state) => ({
-    books: state.books.books.data
+    books: state.books.data
 })
 
 const mapDispatchToProps = dispatch => {
