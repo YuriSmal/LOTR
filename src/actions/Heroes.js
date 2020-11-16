@@ -4,9 +4,13 @@ import {
     GET_POSTS_BY_ID_FAIL
 } from '../constants/constants';
 
-const getBook = (dispatch) => {
+const getHeroes = (dispatch) => {
     dispatch({type: GET_POSTS_BY_ID_REQUEST});
-    fetch('https://the-one-api.dev/v2/book',)
+    fetch('https://the-one-api.dev/v2/character',{
+        headers: {
+            'Authorization': 'Bearer TNdpyFs14J2bWMz53NFH'
+        }
+    })
         .then(res => res.json())
         .then(res => {
             if(res.error) {
@@ -20,6 +24,6 @@ const getBook = (dispatch) => {
          
 };
 
-export const getBookFunc = dispatch => {
-    return() => getBook(dispatch);
+export const getHeroesFunc = dispatch => {
+    return() => getHeroes(dispatch);
 }

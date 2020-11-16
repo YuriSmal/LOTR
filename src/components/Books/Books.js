@@ -1,11 +1,14 @@
 import React from 'react';
+import './books.css';
 
 function Books({ books, getBookInfo }) {
     console.log(books, getBookInfo);
     return (
-        <div className="books">
-            <button onClick={getBookInfo}>Show books</button>
-        </div>
+        <a  onClick={getBookInfo}>
+            <div className="Books_button">
+                <p>Books</p>
+            </div>
+        </a>
     );
 }
 
