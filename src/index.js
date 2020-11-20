@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
 import thunk from 'redux-thunk';
 import reducer from './reducers';
+import { BrowserRouter as Router} from "react-router-dom";
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
@@ -22,7 +23,9 @@ const store = createStore(reducer, composeEnhancers(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root')
 );

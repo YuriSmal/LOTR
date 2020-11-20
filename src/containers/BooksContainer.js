@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getBookFunc } from '../actions/books'
-import Books from '../components/Books/Books'
+import Book from '../components/Books/Book'
 import { books } from '../reducers'
 
 const BooksContainer = ({ books, getBookInfo }) => (
-    <Books
+    <Book
         books={books}
         getBookInfo={getBookInfo}
     />
