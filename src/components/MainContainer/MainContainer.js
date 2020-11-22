@@ -11,9 +11,9 @@ function MainContainer() {
   return (
     <div className="Main-Container">
       <div className="Main-Container_wraper">
-        <h1 className="Main-Container_title">Welcome to Lords of the React </h1>
+        {/* <h1 className="Main-Container_title">Welcome to Lords of the React </h1> */}
         <Switch>
-          <Route exact path="/books" component={BooksContainer} />
+          <Route path="/books" component={BooksContainer} />
           <Route path="/movies" component={FilmsContainer} />
           <Route exact path="/characters" component={HeroesContainer} />
         </Switch>

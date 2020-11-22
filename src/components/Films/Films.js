@@ -7,7 +7,6 @@ class Film extends React.Component {
         super(props);
 
         this.showFilms = this.showFilms.bind(this);
-        // this.showMoreFilms = this.showMoreFilms.bind(this)
     }
 
     componentDidMount()  {

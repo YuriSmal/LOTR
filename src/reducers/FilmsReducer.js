@@ -8,7 +8,7 @@ const initialState = {
     films: {
         isLoading: false,
         error: false,
-        data: []
+        data: false
     }
 };
 
