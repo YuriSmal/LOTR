@@ -6,6 +6,9 @@ class Film extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            search: null
+        }
         this.showFilms = this.showFilms.bind(this);
     }
 
@@ -13,11 +16,32 @@ class Film extends React.Component {
         this.props.getFilmsInfo()
     }
 
+    searchItem(e) {
+        let keyword = e.target.value;
+        this.setState({search:keyword})
+    }
+
+    handleScoreFilter(e) {
+        let scoreType = e.target.value;
+        if (e.target.checked) {
+            this.props.score.addScoreFilter(scoreType);
+        }
+        else {
+            this.props.score.removeScoreFilter(scoreType);
+        }
+    }
+
     showFilms() {
         if(this.props.films.docs) {
             return(
-                this.props.films.docs.map(item => {
-                    if(item.name != "The Lord of the Rings Series" &&  item.name != "The Hobbit Series") {
+                this.props.films.docs.filter((data) => {
+                    if (this.state.search == null)
+                        return data
+                    else if (data.name.toLowerCase().includes(this.state.search.toLowerCase())) {
+                        return data
+                    }
+                }).map(item => {
+                    if(item.name !== "The Lord of the Rings Series" &&  item.name !== "The Hobbit Series") {
                         return(
                             <div key={item._id} className="film">
                                 <div className="movie-img">
@@ -43,6 +67,11 @@ class Film extends React.Component {
         
             return(
                 <div className="film-wrapper">
+                 <input 
+                    type='text' 
+                    placeholder='search...' 
+                    onChange={(e) => this.searchItem(e)} 
+                />
                     {this.showFilms()}
                     </div>
             )
