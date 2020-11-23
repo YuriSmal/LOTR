@@ -4,10 +4,11 @@ import FilmsContainer from '../../containers/FilmsContainer';
 import HeroesContainer from '../../containers/HeroesContainer';
 import './MainContainer.css';
 import { Route, Switch} from "react-router-dom";
+import ParticularHero from "../../components/Heroes/ParticularHero";
 
 
 
-function MainContainer() {
+function MainContainer(props) {
   return (
     <div className="Main-Container">
       <div className="Main-Container_wraper">
@@ -20,6 +21,7 @@ function MainContainer() {
             <h1 className="Main-Container_title">Welcome to Lords of React</h1>
             <p className="Main-Container_text">Welcome to our project.Use the menu to view the required information</p>
           </div>
+          {/* <Route path={`/characters/${this.state.heroes.docs._id}`} component={ParticularHero} /> */}
         </Switch>
       </div>
     </div>
