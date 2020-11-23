@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getHeroesFunc } from '../actions/Heroes';
 import Heroes from '../components/Heroes/Heroes';
-import { heroes } from '../reducers';
+import { heroes } from '../reducers/HeroesReducer';
 
 const HeroesContainer = ({ heroes, getHeroesInfo }) => (
     <Heroes
@@ -12,7 +12,7 @@ const HeroesContainer = ({ heroes, getHeroesInfo }) => (
 )
 
 const mapStateToProps = (state) => ({
-    heroes: state.heroes
+    heroes: state.characters.heroes.data
 })
 
 const mapDispatchToProps = dispatch => {
