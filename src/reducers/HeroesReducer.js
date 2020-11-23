@@ -6,9 +6,9 @@ import {
 
 const initialState = {
     heroes: {
-        isLoading: null,
-        error: null,
-        data: null
+        isLoading: false,
+        error: false,
+        data: []
     }
 };
 
@@ -19,8 +19,8 @@ const HeroesReducer = (state = initialState, action) => {
                 ...state,
                 heroes: {
                     isLoading: true,
-                    error: null,
-                    data: null
+                    error: false,
+                    data: false
                 }
             }
         case GET_CHARACTERS_BY_ID_SUCCESS:
