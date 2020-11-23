@@ -4,10 +4,11 @@ import FilmsContainer from '../../containers/FilmsContainer';
 import HeroesContainer from '../../containers/HeroesContainer';
 import './MainContainer.css';
 import { Route, Switch} from "react-router-dom";
+import ParticularHero from "../../components/Heroes/ParticularHero";
 
 
 
-function MainContainer() {
+function MainContainer(props) {
   return (
     <div className="Main-Container">
       <div className="Main-Container_wraper">
@@ -16,6 +17,7 @@ function MainContainer() {
           <Route path="/books" component={BooksContainer} />
           <Route path="/movies" component={FilmsContainer} />
           <Route exact path="/characters" component={HeroesContainer} />
+          {/* <Route path={`/characters/${this.state.heroes.docs._id}`} component={ParticularHero} /> */}
         </Switch>
       </div>
     </div>

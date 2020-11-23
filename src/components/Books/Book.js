@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import ParticularBook from './ParticularBook/ParticularBook'
-
-=======
->>>>>>> bcd0bcce39c2c6a79b1d8912ac4a2eab1263d5ab
 import './books.css';
 
 class Book extends React.Component {
