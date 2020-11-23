@@ -1,10 +1,10 @@
-.Books_button{
+.book{
     margin: 25px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    padding: 25px;
     background-color: white;
     border: 1px solid white;
-    border-radius: 15px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,4 +15,12 @@
 .Books_button:hover{
     transition: 0.65s ease;
     transform: scale(1.1);
+}
+
+.book-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

@@ -8,7 +8,6 @@ const BooksContainer = ({ books, getBookInfo,}) => (
     <Books
         books={books}
         getBookInfo={getBookInfo}
-        
     />
 )
 

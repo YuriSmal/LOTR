@@ -1,8 +1,11 @@
 .Main-Container{
-    height: 868px;
     width: 100%;
+    min-height: 100vh;
     background: url(img/MainContainer_bg.jpg) center/cover ;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 70px 0;
 }
 .Main-Container_wraper{
     margin: 0 auto;
@@ -12,7 +15,7 @@
     color: white;
     font-size: 60px;
     text-align: center;
-    padding: 60px 15px 15px 15px;
+    margin-bottom: 45px;
 }
 
 .Main-Container_text{

@@ -1,29 +1,29 @@
 import {
-    GET_POSTS_BY_ID_REQUEST,
-    GET_POSTS_BY_ID_SUCCESS,
-    GET_POSTS_BY_ID_FAIL
+    GET_MOVIES_BY_ID_REQUEST,
+    GET_MOVIES_BY_ID_SUCCESS,
+    GET_MOVIES_BY_ID_FAIL
 } from '../constants/constants';
 
 const initialState = {
     films: {
-        isLoading: null,
-        error: null,
-        data: null
+        isLoading: false,
+        error: false,
+        data: false
     }
 };
 
 const FilmsReducer = (state = initialState, action) => {
     switch(action.type) {
-        case GET_POSTS_BY_ID_REQUEST:
+        case GET_MOVIES_BY_ID_REQUEST:
             return {
                 ...state,
                 films: {
                     isLoading: true,
-                    error: null,
-                    data: null
+                    error: false,
+                    data: false
                 }
             }
-        case GET_POSTS_BY_ID_SUCCESS:
+        case GET_MOVIES_BY_ID_SUCCESS:
             return {
                 ...state,
                 films: {
@@ -32,7 +32,7 @@ const FilmsReducer = (state = initialState, action) => {
                     data: action.payload
                 },
             }
-        case GET_POSTS_BY_ID_FAIL:
+        case GET_MOVIES_BY_ID_FAIL:
             return {
                 ...state,
                 films: {

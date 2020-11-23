@@ -1,7 +1,7 @@
 import {
-    GET_POSTS_BY_ID_REQUEST,
-    GET_POSTS_BY_ID_SUCCESS,
-    GET_POSTS_BY_ID_FAIL
+    GET_CHARACTERS_BY_ID_REQUEST,
+    GET_CHARACTERS_BY_ID_SUCCESS,
+    GET_CHARACTERS_BY_ID_FAIL
 } from '../constants/constants';
 
 const initialState = {
@@ -14,7 +14,7 @@ const initialState = {
 
 const HeroesReducer = (state = initialState, action) => {
     switch(action.type) {
-        case GET_POSTS_BY_ID_REQUEST:
+        case GET_CHARACTERS_BY_ID_REQUEST:
             return {
                 ...state,
                 heroes: {
@@ -23,7 +23,7 @@ const HeroesReducer = (state = initialState, action) => {
                     data: null
                 }
             }
-        case GET_POSTS_BY_ID_SUCCESS:
+        case GET_CHARACTERS_BY_ID_SUCCESS:
             return {
                 ...state,
                 heroes: {
@@ -32,7 +32,7 @@ const HeroesReducer = (state = initialState, action) => {
                     data: action.payload
                 },
             }
-        case GET_POSTS_BY_ID_FAIL:
+        case GET_CHARACTERS_BY_ID_FAIL:
             return {
                 ...state,
                 heroes: {

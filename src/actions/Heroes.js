@@ -1,11 +1,11 @@
 import {
-    GET_POSTS_BY_ID_REQUEST,
-    GET_POSTS_BY_ID_SUCCESS,
-    GET_POSTS_BY_ID_FAIL
+    GET_CHARACTERS_BY_ID_REQUEST,
+    GET_CHARACTERS_BY_ID_SUCCESS,
+    GET_CHARACTERS_BY_ID_FAIL
 } from '../constants/constants';
 
 const getHeroes = (dispatch) => {
-    dispatch({type: GET_POSTS_BY_ID_REQUEST});
+    dispatch({type: GET_CHARACTERS_BY_ID_REQUEST});
     fetch('https://the-one-api.dev/v2/character',{
         headers: {
             'Authorization': 'Bearer TNdpyFs14J2bWMz53NFH'
@@ -14,12 +14,12 @@ const getHeroes = (dispatch) => {
         .then(res => res.json())
         .then(res => {
             if(res.error) {
-                dispatch({type: GET_POSTS_BY_ID_FAIL, payload: res.error});
+                dispatch({type: GET_CHARACTERS_BY_ID_FAIL, payload: res.error});
             }
-            dispatch({type: GET_POSTS_BY_ID_SUCCESS, payload: res});
+            dispatch({type: GET_CHARACTERS_BY_ID_SUCCESS, payload: res});
          })
          .catch(error => {
-             dispatch({type: GET_POSTS_BY_ID_FAIL, payload: error});
+             dispatch({type: GET_CHARACTERS_BY_ID_FAIL, payload: error});
          })
          
 };
