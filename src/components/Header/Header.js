@@ -8,7 +8,11 @@ function Header() {
         <div className="header">
             <div className = "header_container">
                 <Link className="header-item-wrapper" to='/'>
-                    <h1 className="header-container_title">Lords Of The React </h1>
+                    <div className = "Logo">
+                        <div className="logo_img"></div>
+                        <h1 className="logo_text">Lords Of The React </h1>
+                    </div>
+                    
                 </Link>
                 <div className="header-items-container">
                    <Link className="header-item-wrapper" to="/movies">
@@ -29,3 +33,4 @@ function Header() {
 
 
 export default Header;
+

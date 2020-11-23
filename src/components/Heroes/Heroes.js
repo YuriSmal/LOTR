@@ -16,7 +16,7 @@ class Heroes extends React.Component {
 
 
     showHeroes() {
-        if(this.props.heroes) {
+        if(this.props.heroes.docs) {
             return(
             <div className="heroes_Conatiner">{
                 this.props.heroes.docs.map(item => {
@@ -28,20 +28,16 @@ class Heroes extends React.Component {
                     )
                 })
                 }</div>
-                
-                
             )
         }
     }
 
     render() {
-        
             return(
                 <div>
                     {this.showHeroes()}
                 </div>
             )
-        
     }
             
 }

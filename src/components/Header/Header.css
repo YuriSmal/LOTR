@@ -1,3 +1,4 @@
+
 .header{
     width: 100%;
     background-color: black;
@@ -5,38 +6,60 @@
 }
 
 .header_container{
+    padding-top: 25px;
+    padding-bottom: 25px;
     max-width: 1400px;
     margin:  0 auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.Logo{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 40px;
 }
-
-.header-container_title {
+.logo_img{
+    width: 40px;
+    height: 40px;
+    background: url(img/Безымянный-1.png) center/cover;
+}
+.logo_text{
+    margin-left:10px ;
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     text-align: center;
+    font-weight: 100;
 }
 
 .header-items-container {
-    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 25px;
-    font-size: 20px;
+    font-size: 18px;
+    margin-right: 50px;
 }
 
 .header-item {
-    margin-left: 40px;
+    width: 0%;
+    padding-bottom: 3px;
+    border: 3px solid black;
     text-transform: uppercase;
-
+  
+}
+.header-item:hover{
+    width: 100%;
+    border-bottom: 3px solid #E01F00 ;
+    transition: 0.60s ease;
+   
 }
 
 
 .header-item-wrapper {
+    padding: 0px 40px 0px 40px;
     color: #fff;
     text-decoration: none;
 }

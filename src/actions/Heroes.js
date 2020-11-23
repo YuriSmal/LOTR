@@ -6,7 +6,7 @@ import {
 
 const getHeroes = (dispatch) => {
     dispatch({type: GET_CHARACTERS_BY_ID_REQUEST});
-    fetch('https://the-one-api.dev/v2/character',{
+    fetch('https://the-one-api.dev/v2/character/',{
         headers: {
             'Authorization': 'Bearer TNdpyFs14J2bWMz53NFH'
         }
