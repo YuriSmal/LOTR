@@ -67,13 +67,18 @@ class Film extends React.Component {
         
             return(
                 <div className="film-wrapper">
-                 <input 
-                    type='text' 
-                    placeholder='search...' 
-                    onChange={(e) => this.searchItem(e)} 
-                />
-                    {this.showFilms()}
+                    <div className="search-filter-wrapper search-filter-films">
+                    <input className="search-filter"
+                        type='text' 
+                        placeholder='Search by title...' 
+                        onChange={(e) => this.searchItem(e)} 
+                    />
                     </div>
+
+                    <div className="film-wrapper">
+                        {this.showFilms()}
+                    </div>
+                </div>
             )
         
     }

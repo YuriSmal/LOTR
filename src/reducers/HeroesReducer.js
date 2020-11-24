@@ -1,16 +1,18 @@
 import {
     GET_CHARACTERS_BY_ID_REQUEST,
     GET_CHARACTERS_BY_ID_SUCCESS,
-    GET_CHARACTERS_BY_ID_FAIL
+    GET_CHARACTERS_BY_ID_FAIL,
+    ADD_FILTER
 } from '../constants/constants';
 
 const initialState = {
     heroes: {
         isLoading: false,
         error: false,
-        data: []
-    },
 
+        data: {docs: []},
+        filteredHeroes: {docs: []}
+    }
 };
 
 const HeroesReducer = (state = initialState, action) => {
@@ -19,11 +21,10 @@ const HeroesReducer = (state = initialState, action) => {
             return {
                 ...state,
                 heroes: {
+                    ...state.heroes,
                     isLoading: true,
                     error: false,
-                    data: false
-                },
- 
+                }
             }
         case GET_CHARACTERS_BY_ID_SUCCESS:
             return {
@@ -31,7 +32,8 @@ const HeroesReducer = (state = initialState, action) => {
                 heroes: {
                     isLoading: false,
                     error: false,
-                    data: action.payload
+                    data: action.payload,
+                    filteredHeroes: action.payload
                 },
 
             }
@@ -43,7 +45,16 @@ const HeroesReducer = (state = initialState, action) => {
                     error: action.payload,
                     data: false
                 },
-
+            }
+        case ADD_FILTER:
+            return {
+                ...state,
+                heroes: {
+                    isLoading: false,
+                    error: false,
+                    data: state.heroes.data,
+                    filteredHeroes: action.payload
+                }
             }
         default: return state;        
     }

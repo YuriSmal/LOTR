@@ -4,26 +4,22 @@ import { getFilmsFunc, addScoreFilter, removeScoreFilter } from '../actions/Film
 import Films from '../components/Films/Films';
 import { films } from '../reducers';
 
-const FilmsContainer = ({ films, getFilmsInfo, search, addScoreFilter, score }) => (
+const FilmsContainer = ({ films, getFilmsInfo, search,}) => (
     <Films
         films={films}
         getFilmsInfo={getFilmsInfo}
         search={search}
-        addScoreFilter={addScoreFilter}
-        score={score}
     />
 )
 
 const mapStateToProps = (state) => ({
     films: state.films.films.data,
     search: state.films.films.search,
-    score: state.scoreFilter
 })
 
 const mapDispatchToProps = dispatch => {
     return {
         getFilmsInfo: getFilmsFunc(dispatch),
-        addScoreFilter: addScoreFilter(dispatch),
     }
 };
 

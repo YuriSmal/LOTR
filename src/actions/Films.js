@@ -2,8 +2,6 @@ import {
     GET_MOVIES_BY_ID_REQUEST,
     GET_MOVIES_BY_ID_SUCCESS,
     GET_MOVIES_BY_ID_FAIL,
-    ADD_SCORE_FILTER,
-    REMOVE_SCORE_FILTER
 } from '../constants/constants';
 
 const getFilms = (dispatch) => {
@@ -30,14 +28,8 @@ export const getFilmsFunc = dispatch => {
     return() => getFilms(dispatch);
 }
 
-export const addScoreFilter = (scoreType) => {
-    return {
-        type: ADD_SCORE_FILTER, scoreType
-    }
-}
-
-export const removeScoreFilter = (scoreType) => {
-    return {
-        type: REMOVE_SCORE_FILTER, scoreType
-    }
-}
+// export const addScoreFilter = (scoreType) => {
+//     return {
+//         type: ADD_SCORE_FILTER, scoreType
+//     }
+// }
