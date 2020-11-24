@@ -12,7 +12,7 @@ const HeroesContainer = ({ heroes, getHeroesInfo }) => (
 )
 
 const mapStateToProps = (state) => ({
-    heroes: state.characters.heroes.data
+    heroes: state.characters.heroes.data,
 })
 
 const mapDispatchToProps = dispatch => {

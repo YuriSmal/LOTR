@@ -5,24 +5,28 @@ import './Header.css';
 function Header() {
 
     return (
-        <div className="header">
-            <div className = "header_container">
-                <Link className="header-item-wrapper" to='/'>
-                    <div className = "Logo">
+        <div id="Header">
+            <div className = "hamburger-menu">
+                <Link className="logo_wrapper" to='/'>
+                    <div className = "logo_995px">
                         <div className="logo_img"></div>
                         <h1 className="logo_text">Lords Of The React </h1>
                     </div>
-                    
                 </Link>
-                <div className="header-items-container">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                <span></span>
+                </label>
+                
+                <div className="menu__box">
                    <Link className="header-item-wrapper" to="/movies">
-                        <div className="header-item">Movies</div>
+                        <div className="menu__item">Movies</div>
                     </Link>
                     <Link className="header-item-wrapper" to='/books'>
-                        <div className="header-item">Books</div>
+                        <div className="menu__item">Books</div>
                     </Link>
                     <Link className="header-item-wrapper" to="/characters">
-                        <div className="header-item">Characters</div>
+                        <div className="menu__item">Characters</div>
                     </Link>
 
                 </div>

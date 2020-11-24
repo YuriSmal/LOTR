@@ -9,7 +9,8 @@ const initialState = {
         isLoading: false,
         error: false,
         data: []
-    }
+    },
+
 };
 
 const HeroesReducer = (state = initialState, action) => {
@@ -21,7 +22,8 @@ const HeroesReducer = (state = initialState, action) => {
                     isLoading: true,
                     error: false,
                     data: false
-                }
+                },
+ 
             }
         case GET_CHARACTERS_BY_ID_SUCCESS:
             return {
@@ -31,6 +33,7 @@ const HeroesReducer = (state = initialState, action) => {
                     error: false,
                     data: action.payload
                 },
+
             }
         case GET_CHARACTERS_BY_ID_FAIL:
             return {
@@ -39,7 +42,8 @@ const HeroesReducer = (state = initialState, action) => {
                     isLoading: false,
                     error: action.payload,
                     data: false
-                }
+                },
+
             }
         default: return state;        
     }
