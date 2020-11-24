@@ -1,7 +1,8 @@
 import {
     GET_CHARACTERS_BY_ID_REQUEST,
     GET_CHARACTERS_BY_ID_SUCCESS,
-    GET_CHARACTERS_BY_ID_FAIL
+    GET_CHARACTERS_BY_ID_FAIL,
+    ADD_FILTER
 } from '../constants/constants';
 
 const getHeroes = (dispatch) => {
@@ -26,4 +27,23 @@ const getHeroes = (dispatch) => {
 
 export const getHeroesFunc = dispatch => {
     return() => getHeroes(dispatch);
+}
+
+export const filterHeroes = (filters) => {
+    return function(dispatch, getState) {
+        let filteredHeroes = {...getState().characters.heroes.data};
+        if (Object.keys(filters).length) {
+            filteredHeroes.docs = filteredHeroes.docs.filter(item => {
+                let isValid = true;
+                for( let key in filters) {
+                    if(item[key] !== filters[key]) {
+                        isValid = false;
+                        break
+                    }
+                }
+                return isValid;
+            });
+        }
+        dispatch({type: ADD_FILTER, payload: filteredHeroes})
+    }
 }

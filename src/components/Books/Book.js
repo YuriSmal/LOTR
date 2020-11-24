@@ -56,14 +56,17 @@ class Book extends React.Component {
         
             return(
                 <div className="book-wrapper">
-                <input 
-                    type='text' 
-                    placeholder='search...' 
-                    onChange={(e) => this.searchItem(e)} 
-                />
-                    {this.showBooks()}
-
+                    <div className="search-filter-wrapper">
+                    <input className="search-filter"
+                        type='text' 
+                        placeholder='Search by title...' 
+                        onChange={(e) => this.searchItem(e)} 
+                    />
                     </div>
+                    <div className="book-wrapper">
+                        {this.showBooks()}
+                    </div>
+                </div>
             )
         
     }
