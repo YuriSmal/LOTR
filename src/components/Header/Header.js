@@ -14,7 +14,7 @@ function Header() {
                     </div>
                 </Link>
                 <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
+                <label className="menu__btn" htmlFor="menu__toggle">
                 <span></span>
                 </label>
                 

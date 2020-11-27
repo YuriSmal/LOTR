@@ -1,8 +1,7 @@
-import { render } from '@testing-library/react';
 import React from 'react';
-import Pagination from "react-js-pagination";
-import { Link, Route, Switch } from 'react-router-dom';
-import ParticularHero from './ParticularHero'
+import { Link, Route, Switch,  useRouteMatch, useParams, } from 'react-router-dom';
+import ParticularHero from './ParticularHero';
+import Pagination from './Pagination'
 
 import './Heroes.css'
 
@@ -13,19 +12,14 @@ class Heroes extends React.Component {
         this.state = {
             search: null,
             races: [],
-            activeFilters: {}
+            activeFilters: {},
         }
 
         this.showHeroes = this.showHeroes.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.getUniqueValues = this.getUniqueValues.bind(this);
-
     }
-
-    handlePageChange(pageNumber) {
-        console.log(`active page is ${pageNumber}`);
-        this.setState({activePage: pageNumber});
-    }
+    
     componentDidMount()  {
         this.props.getHeroesInfo();
     }
@@ -53,7 +47,7 @@ class Heroes extends React.Component {
         arr.forEach((value) => {
            let isUnique = true; 
            uniqueValues.forEach((item) => {
-               if(!item || !value[key] || !item.length || !value[key].length || value[key] == "NaN" || item.toLowerCase() === value[key].toLowerCase()) {
+               if(!item || !value[key] || !item.length || !value[key].length || value[key] === "NaN" || item.toLowerCase() === value[key].toLowerCase()) {
                    isUnique = false;
                }
            })
@@ -91,7 +85,7 @@ class Heroes extends React.Component {
                             <option value='all'>Filter by gender</option>
                             {uniqueGender.map((gender) => <option key={gender}>{gender}</option>)}
                         </select>
-
+                        <Pagination />
                     </div>
                     <div className="search-filter-wrapper search-filter-heroes">
                     <input className="search-filter"
@@ -101,7 +95,6 @@ class Heroes extends React.Component {
                     />
                     </div>
                 </div>
-                
                 {this.props.filteredHeroes.filter((data) => {
                         if (this.state.search == null)
                             return data
@@ -114,7 +107,7 @@ class Heroes extends React.Component {
                                 <h2 className ="heroes_name">{item.name}</h2>
                                 <p className ="heroes_race">{item.race}</p>
                                 <p className ="heroes_race">{item.gender}</p>
-                                <Link to={`/characters/${item._id}`} id={item._id}>
+                                <Link to={`/characters/${item._id}`}>
                                     See more
                                 </Link>
                             </div>
@@ -127,12 +120,26 @@ class Heroes extends React.Component {
 
     render() {
             return(
-                <div className="book-wrapper">
-                    
-                    <div className="book-wrapper">
-                        {this.props.heroes.length ? this.showHeroes() : <h2>Loading...</h2>}
+                <Switch>
+                    <Route exact path="/characters">
+                    <div className="book-wrapper">    
+                        <div className="book-wrapper">
+                            {this.props.heroes.length ? this.showHeroes() : <h2>Loading...</h2>}
+                        </div>
                     </div>
-                </div>
+                    </Route>
+                
+                    <Route
+                        path="/characters/:id"
+                        render={(props) => (
+                            <ParticularHero
+                            {...props}
+                            getParticularHeroInfo={this.props.getParticularHeroInfo}
+                            heroes={this.props.filteredHeroes}
+                            />
+                        )}
+                    />
+                </Switch>
             )
 
     }

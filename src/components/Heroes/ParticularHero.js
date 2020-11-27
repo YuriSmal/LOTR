@@ -1,12 +1,31 @@
 import React from 'react';
 import { Route, Switch} from "react-router-dom";
 
-function ParticularHero(props) {
-    return(
-        <h1>111111111111</h1>
+class ParticularHero extends React.Component {
+    constructor(props) {
+    super(props);
+  }
 
-       
+  componentDidMount() {
+    this.props.getParticularHeroInfo(this.props.match.params.id);
+  }
+
+  render() {
+    return(
+      <div>
+          {this.props.heroes.map(item => {
+            return(
+              <h1>
+              {item.name}
+              </h1>
+            )
+          })}
+      </div>
     )
+    
+  }
+  
+
 }
 
 export default ParticularHero;

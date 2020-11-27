@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getHeroesFunc, filterHeroes } from '../actions/Heroes';
+import { getHeroesFunc, filterHeroes, getParticularHeroFunc } from '../actions/Heroes';
 import Heroes from '../components/Heroes/Heroes';
 
-const HeroesContainer = ({ heroes, getHeroesInfo, handleChange, filteredHeroes }) => (
+const HeroesContainer = ({ heroes, getHeroesInfo, handleChange, filteredHeroes, getParticularHeroInfo }) => (
     <Heroes
         heroes={heroes}
         getHeroesInfo={getHeroesInfo}
         handleChange={handleChange}
         filteredHeroes={filteredHeroes}
+        getParticularHeroInfo={getParticularHeroInfo}
     />
 )
 
@@ -22,7 +23,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => {
     return {
         getHeroesInfo: getHeroesFunc(dispatch),
-        handleChange: (race) => dispatch(filterHeroes(race))
+        handleChange: (race) => dispatch(filterHeroes(race)),
+        getParticularHeroInfo: getParticularHeroFunc(dispatch)
     }
 };
 

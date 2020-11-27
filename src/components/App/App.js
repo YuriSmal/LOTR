@@ -9,7 +9,7 @@ import Book from '../Books/Book'
 function App() {
   return (
     <div className="App">
-      <section>  <Header/></section>
+      <section> <Header/></section>
       <section> <MainContainer/></section>
       <section> <Footer/></section>
     </div>

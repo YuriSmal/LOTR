@@ -3,10 +3,8 @@ import BooksContainer from '../../containers/BooksContainer';
 import FilmsContainer from '../../containers/FilmsContainer';
 import HeroesContainer from '../../containers/HeroesContainer';
 import './MainContainer.css';
-import { Route, Switch} from "react-router-dom";
+import { Route, Switch,  useRouteMatch, useParams} from "react-router-dom";
 import ParticularHero from "../../components/Heroes/ParticularHero";
-
-
 
 function MainContainer(props) {
   return (
@@ -16,7 +14,7 @@ function MainContainer(props) {
         <Switch>
           <Route path="/books" component={BooksContainer} />
           <Route path="/movies" component={FilmsContainer} />
-          <Route exact path="/characters" component={HeroesContainer} />
+          <Route path="/characters" component={HeroesContainer} />
           <div   className="Main-Container_section">
             <h1 className="Main-Container_title">Welcome to Lords of React</h1>
             <p className="Main-Container_text">Welcome to our project.Use the menu to view the required information</p>

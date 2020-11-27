@@ -10,9 +10,9 @@ import reducer from './reducers';
 import { BrowserRouter as Router} from "react-router-dom";
 
 const middleware = [ thunk ];
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger());
-}
+// if (process.env.NODE_ENV !== 'production') {
+//   middleware.push(createLogger());
+// }
 
 //REDUX-DEV-TOOLS
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
