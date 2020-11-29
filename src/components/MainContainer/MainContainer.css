@@ -9,8 +9,8 @@
 
 .Main-Container{
     width: 100%;
-    min-height: 100vh;
-    background: url(img/MainContainer_bg.jpg) center/cover ;
+    height: 1300px;
+    background: url(img/MainContainer_bg.jpg) center ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
