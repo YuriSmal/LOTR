@@ -3,21 +3,22 @@ import { connect } from 'react-redux';
 import { getHeroesFunc, filterHeroes, getParticularHeroFunc } from '../actions/Heroes';
 import Heroes from '../components/Heroes/Heroes';
 
-const HeroesContainer = ({ heroes, getHeroesInfo, handleChange, filteredHeroes, getParticularHeroInfo }) => (
+const HeroesContainer = ({ heroes, getHeroesInfo, handleChange, filteredHeroes, getParticularHeroInfo, currentPage }) => (
     <Heroes
         heroes={heroes}
         getHeroesInfo={getHeroesInfo}
         handleChange={handleChange}
         filteredHeroes={filteredHeroes}
         getParticularHeroInfo={getParticularHeroInfo}
+        currentPage={currentPage}
     />
 )
 
 const mapStateToProps = (state) => ({
 
     filteredHeroes: state.characters.heroes.filteredHeroes.docs,
-    heroes: state.characters.heroes.data.docs
-
+    heroes: state.characters.heroes.data.docs,
+    currentPage: state.characters.heroes.currentPage
 })
 
 const mapDispatchToProps = dispatch => {

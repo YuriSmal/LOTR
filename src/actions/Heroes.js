@@ -70,6 +70,7 @@ export const filterHeroes = (filters) => {
                 return isValid;
             });
         }
+        filteredHeroes.total = filteredHeroes.docs.length;
         dispatch({type: ADD_FILTER, payload: filteredHeroes})
     }
 }

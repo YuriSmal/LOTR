@@ -43,7 +43,8 @@ const HeroesReducer = (state = initialState, action) => {
                     isLoading: false,
                     error: false,
                     data: action.payload,
-                    filteredHeroes: action.payload
+                    filteredHeroes: action.payload,
+                    currentPage: state.heroes.currentPage
                 },
 
             }
