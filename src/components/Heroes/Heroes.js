@@ -59,6 +59,9 @@ class Heroes extends React.Component {
     }
 
     showHeroes() {
+        const heroesOnPage = this.props.filteredHeroes.slice(this.props.currentPage * 25,
+        this.props.currentPage * 25 + 25);
+        
         if(this.props.filteredHeroes) {
             const uniqueGender = this.getUniqueValues(this.props.heroes, "gender");
             const uniqueRace = this.getUniqueValues(this.props.heroes, "race"); 
@@ -95,7 +98,7 @@ class Heroes extends React.Component {
                     />
                     </div>
                 </div>
-                {this.props.filteredHeroes.filter((data) => {
+                {heroesOnPage.filter((data) => {
                         if (this.state.search == null)
                             return data
                         else if (data.name.toLowerCase().includes(this.state.search.toLowerCase())) {
@@ -113,7 +116,7 @@ class Heroes extends React.Component {
                             </div>
                         )
                     })}
-                </div>
+            </div>
             )
         }
     }
