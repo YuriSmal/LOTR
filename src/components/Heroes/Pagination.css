@@ -1,4 +1,8 @@
 .pagination {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid black;
+    border-radius: 15px;
     display: flex;
     color: #fff;
     justify-content: center;
@@ -7,4 +11,10 @@
 
 .pagination span {
     margin: 15px;
+    cursor: pointer;
+}
+
+.pagination span:hover{
+    color: red;
+    transition: 0.65s ease;
 }

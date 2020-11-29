@@ -4,7 +4,7 @@ import ParticularHero from './ParticularHero';
 import Pagination from './Pagination'
 
 import './Heroes.css'
-
+import raceImg from './img/wristband-icon-31.png'
 class Heroes extends React.Component {
     constructor(props) {
         super(props);
@@ -13,6 +13,7 @@ class Heroes extends React.Component {
             search: null,
             races: [],
             activeFilters: {},
+            raceimg : <img className ="heroes_img" src ={raceImg} />
         }
 
         this.showHeroes = this.showHeroes.bind(this);
@@ -88,16 +89,17 @@ class Heroes extends React.Component {
                             <option value='all'>Filter by gender</option>
                             {uniqueGender.map((gender) => <option key={gender}>{gender}</option>)}
                         </select>
-                        <Pagination />
+                        <div className=" search-filter-heroes">
+                            <input className="search-filter"
+                                type='text' 
+                                placeholder='Search by title...' 
+                                onChange={(e) => this.searchItem(e)} 
+                            />
+                        </div>
                     </div>
-                    <div className="search-filter-wrapper search-filter-heroes">
-                    <input className="search-filter"
-                        type='text' 
-                        placeholder='Search by title...' 
-                        onChange={(e) => this.searchItem(e)} 
-                    />
-                    </div>
+                    
                 </div>
+                <div className="heroes_wrapper">
                 {heroesOnPage.filter((data) => {
                         if (this.state.search == null)
                             return data
@@ -106,16 +108,22 @@ class Heroes extends React.Component {
                         }
                     }).map(item => {
                         return(
-                            <div className ="heroes_box" key={item._id} >
+                             <div className ="heroes_box" key={item._id} >
+                                 <div  >{this.state.raceimg}</div>
                                 <h2 className ="heroes_name">{item.name}</h2>
                                 <p className ="heroes_race">{item.race}</p>
-                                <p className ="heroes_race">{item.gender}</p>
-                                <Link to={`/characters/${item._id}`}>
-                                    See more
-                                </Link>
+                                <p className ="heroes_gender">{item.gender}</p>
+                                <div className = "heroes_link_box">
+                                    <Link className ="heroes_link" to={`/characters/${item._id}`}>
+                                        See more
+                                    </Link>
+                                </div>
+                               
                             </div>
                         )
                     })}
+                    </div>
+                   <div> <Pagination /></div>
             </div>
             )
         }

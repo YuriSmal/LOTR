@@ -1,4 +1,15 @@
+@keyframes bookmAnimation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 .book{
+    opacity: 0;
     margin: 25px;
     width: 500px;
     padding: 25px;
@@ -10,6 +21,8 @@
     justify-content: center;
     -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73); 
     box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73);
+    animation: bookmAnimation 2s ease;
+    animation-fill-mode: forwards;
 }
 
 .Books_button:hover{
@@ -35,4 +48,18 @@
 
 .search-filter-wrapper{
     width: 100%;
+}
+
+
+
+@media screen and (max-width: 760px) {
+    .book {
+        margin: 15px 0px;
+        width: 100%;
+        
+    
+    }
+    .book-wrapper{
+        width: 100%;
+    }
 }
