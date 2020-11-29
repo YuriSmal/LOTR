@@ -1,0 +1,9 @@
+.maintenance-wrapper {
+    margin: 0 auto;
+    background-image: url('../../images/gendalf.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    width: 50%;
+    height: 100%;
+}
