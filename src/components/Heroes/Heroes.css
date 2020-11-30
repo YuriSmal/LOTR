@@ -1,110 +1,104 @@
 @keyframes heroesAnimation {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-
-.heroes_Conatiner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.heroes_wrapper{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.heroes_box{
+  0% {
     opacity: 0;
-    width: 250px;
-    height: 170px;
-    border: 1px solid white;
-    border-radius: 15px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73); 
-    box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73);
-    animation: heroesAnimation 2s ease;
-    animation-fill-mode: forwards;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heroes_Conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.heroes_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.heroes_box {
+  opacity: 0;
+  width: 250px;
+  height: 170px;
+  border: 1px solid white;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.73);
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.73);
+  animation: heroesAnimation 2s ease;
+  animation-fill-mode: forwards;
 }
 
 .heroes-filter-wrapper {
-    position: relative;
-    top: -70px;
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    border: 1px solid black;
-    border-bottom-right-radius:10px ;
-    border-bottom-left-radius:10px ;
-    background-color: rgba(0, 0, 0, 0.5);;
-   
+  position: relative;
+  top: -70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 1px solid black;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .heroes-filter select {
-    position: relative;
-    top: 100px;
-    margin-bottom: 25px;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    width: 200px;
+  position: relative;
+  top: 100px;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 200px;
 }
 
 .heroes-filter select::after {
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
 }
-
-
 
 #race {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.search-filter-heroes{
-    position: relative;
-    top: -70px;
+.search-filter-heroes {
+  position: relative;
+  top: -70px;
 }
 
-.heroes_img{
-    width: 60px;
-    height: 60px;
+.heroes_img {
+  width: 60px;
+  height: 60px;
 }
 
-.heroes_link{
-    margin-top: 5px;
-    text-decoration: none;
-    color: red;
-    border-bottom: 2px solid white;
+.heroes_link {
+  margin-top: 5px;
+  text-decoration: none;
+  color: red;
+  border-bottom: 2px solid white;
 }
-.heroes_link:hover{
-    border-bottom: 2px solid red;
-   transition: 1s ease;
+.heroes_link:hover {
+  border-bottom: 2px solid red;
+  transition: 1s ease;
 }
-.heroes_race{
-    margin-top: 5px;
+.heroes_race {
+  margin-top: 5px;
 }
-.heroes_gender{
-    margin-top: 5px;
+.heroes_gender {
+  margin-top: 5px;
 }

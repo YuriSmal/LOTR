@@ -1,56 +1,67 @@
 @keyframes OnLoadText {
-    0%   {
-        opacity: 0;
-    }
-    100% {   
-        opacity: 1;
-    }
-}
-
-.Main-Container{
-    width: 100%;
-    min-height: 100vh;
-    background: url(img/MainContainer_bg.jpg) center/cover ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 70px 0;
-}
-.Main-Container_wraper{
-    margin: 0 auto;
-    max-width: 1400px;
-}
-.Main-Container_title{
-    color: white;
-    font-size: 60px;
-    text-align: center;
-    margin-bottom: 45px;
-    animation-delay: 0.5s;
-    animation: OnLoadText 2s ease  ;
-    animation-fill-mode:forwards;
+  0% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.Main-Container_text{
-    margin: 0 auto;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    max-width:500px;
-    font-weight: 100;
-    line-height: 1.3;
-    padding: 50px 15px 60px 15px;
-    animation: OnLoadText 2s ease  ;
-    animation-fill-mode:forwards;
-    animation-delay: 1s;
-    opacity: 0;
+@font-face {
+  font-family: "Anirm";
+  src: url("../../fonts/Anirm/anirm___.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.Main-Container_section{
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.Main-Container {
+  width: 100%;
+  min-height: 100vh;
+  background: url(img/MainContainer_bg.jpg) center/cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 70px 0;
+}
+.Main-Container_wraper {
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.Main-Container_title {
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 45px;
+  animation-delay: 0.5s;
+  animation: OnLoadText 2s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+/* 
+.Main-Container_title span {
+  font-family: "Anirm";
+} */
+
+.Main-Container_text {
+  margin: 0 auto;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  max-width: 500px;
+  font-weight: 100;
+  line-height: 1.3;
+  padding: 50px 15px 60px 15px;
+  animation: OnLoadText 2s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.Main-Container_section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }

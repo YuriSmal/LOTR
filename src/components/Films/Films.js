@@ -68,7 +68,7 @@ class Film extends React.Component {
                             <div key={item._id} className="film">
                                 <div className="movie-img">
                                 {item.name === "The Fellowship of the Ring" && (<div >{this.state.img}</div>)}
-                                {item.name === "The Two Towers" && (<div >{this.state.img2}</div>)}
+                                {item.name === "The Two Towers " && (<div >{this.state.img2}</div>)}
                                 {item.name === "The Return of the King" && (<div >{this.state.img3}</div>)}
                                 {item.name === "The Unexpected Journey" && (<div >{this.state.img4}</div>)}
                                 {item.name === "The Desolation of Smaug" && (<div >{this.state.img5}</div>)}

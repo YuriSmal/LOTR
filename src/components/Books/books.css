@@ -1,65 +1,59 @@
 @keyframes bookmAnimation {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-
-.book{
+  0% {
     opacity: 0;
-    margin: 25px;
-    width: 500px;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid white;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73); 
-    box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.73);
-    animation: bookmAnimation 2s ease;
-    animation-fill-mode: forwards;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.Books_button:hover{
-    transition: 0.65s ease;
-    transform: scale(1.1);
+.book {
+  opacity: 0;
+  margin: 25px;
+  width: 450px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.73);
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.73);
+  animation: bookmAnimation 2s ease;
+  animation-fill-mode: forwards;
+}
+
+.Books_button:hover {
+  transition: 0.65s ease;
+  transform: scale(1.1);
 }
 
 .book-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.book-img_img{
-    width: 150px;
-    height: 200px;
+.book-img_img {
+  width: 150px;
+  height: 200px;
 }
-.book_title{
-    margin-top: 10px;
-}
-
-.search-filter-wrapper{
-    width: 100%;
+.book_title {
+  margin-top: 10px;
 }
 
-
+.search-filter-wrapper {
+  width: 100%;
+}
 
 @media screen and (max-width: 760px) {
-    .book {
-        margin: 15px 0px;
-        width: 100%;
-        
-    
-    }
-    .book-wrapper{
-        width: 100%;
-    }
+  .book {
+    margin: 15px 0px;
+    width: 100%;
+  }
+  .book-wrapper {
+    width: 100%;
+  }
 }

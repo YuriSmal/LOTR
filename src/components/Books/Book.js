@@ -66,13 +66,13 @@ class Book extends React.Component {
         
             return(
                 <div className="book-wrapper">
-                    <div className="search-filter-wrapper">
+                    {/* <div className="search-filter-wrapper">
                     <input className="search-filter"
                         type='text' 
                         placeholder='Search by title...' 
                         onChange={(e) => this.searchItem(e)} 
                     />
-                    </div>
+                    </div> */}
                     <div className="book-wrapper">
                         {this.showBooks()}
                     </div>
