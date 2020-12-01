@@ -115,6 +115,7 @@
   text-decoration: none;
   margin-top: 5px;
 }
+
 .heroes_kostyl{
   margin: 0 auto;
   max-width: 1400px;
@@ -129,3 +130,8 @@
     right: -10px;
   }
 }
+
+.heroes-preloader {
+  color: #fff;
+}
+

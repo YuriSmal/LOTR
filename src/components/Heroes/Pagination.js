@@ -27,7 +27,7 @@ class Pagination extends React.Component {
         <div className="pagination">
             <span onClick={() => this.props.setCurrentPage(0)}>&laquo;</span>
             {pages.map((value, i, arr) => (
-              <span onClick={() => this.props.setCurrentPage(value-1)} key={value}>{value}</span>
+              <span className={(this.props.currentPage ===  value-1 ? 'pagination-item-active' : '')} onClick={() => this.props.setCurrentPage(value-1)} key={value}>{value}</span>
             ))}
             <span onClick={() => this.props.setCurrentPage(totalPages.length-1)}>&raquo;</span>
         </div>
