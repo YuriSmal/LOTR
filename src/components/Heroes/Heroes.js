@@ -99,6 +99,7 @@ class Heroes extends React.Component {
                     </div>
                     
                 </div>
+                <p className="heroes_kostyl">qqqqqqqqqqq qqqqqqqqqqqqq qqqqqqqqqqqqqqqqqqqqqqq qqqqqqqqqqqqqqqqqqqqqqqqqq qqqqqqqqqqqqqqqqqqq qqqqqqqqqqqqq qqqqqqqqqqqqqqqqqqq qqqqqqqqqq</p>
                 <div className="heroes_wrapper">
                 {heroesOnPage.filter((data) => {
                         if (this.state.search == null)
@@ -108,18 +109,18 @@ class Heroes extends React.Component {
                         }
                     }).map(item => {
                         return(
+                            <Link  to={`/characters/${item._id}`}>
                              <div className ="heroes_box" key={item._id} >
                                  <div  >{this.state.raceimg}</div>
                                 <h2 className ="heroes_name">{item.name}</h2>
                                 <p className ="heroes_race">{item.race}</p>
                                 <p className ="heroes_gender">{item.gender}</p>
                                 <div className = "heroes_link_box">
-                                    <Link className ="heroes_link" to={`/characters/${item._id}`}>
-                                        See more
-                                    </Link>
+                                   <p className ="heroes_link">See more</p> 
                                 </div>
                                
                             </div>
+                            </Link>
                         )
                     })}
                     </div>
