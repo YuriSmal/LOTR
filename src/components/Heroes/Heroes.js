@@ -3,7 +3,7 @@ import { Link, Route, Switch} from 'react-router-dom';
 import ParticularHero from './ParticularHero';
 import Pagination from './Pagination';
 import './Heroes.css';
-import raceImg from './img/wristband-icon-31.png'
+import raceImg from './img/wristband-icon-31.png';
 
 class Heroes extends React.Component {
     constructor(props) {
@@ -135,7 +135,7 @@ class Heroes extends React.Component {
                     <Route exact path="/characters">
                     <div className="book-wrapper">    
                         <div className="book-wrapper">
-                            {this.props.heroes.length ? this.showHeroes() : <h2>Loading...</h2>}
+                            {this.props.heroes.length ? this.showHeroes() : <h2 className="heroes-preloader">Loading...</h2>}
                         </div>
                     </div>
                     </Route>

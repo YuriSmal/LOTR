@@ -1,20 +1,28 @@
 .pagination {
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid black;
-    border-radius: 15px;
-    display: flex;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination span {
-    margin: 15px;
-    cursor: pointer;
+  margin: 0 15px;
+  cursor: pointer;
 }
 
-.pagination span:hover{
-    color: red;
-    transition: 0.65s ease;
+.pagination span:hover {
+  color: red;
+  transition: 0.65s ease;
+}
+
+.pagination-item-active {
+  color: black;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
 }
