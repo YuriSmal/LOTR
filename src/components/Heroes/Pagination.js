@@ -10,7 +10,6 @@ class Pagination extends React.Component {
   }
   
   render() {
-     console.log (this.props.heroesAmount);
     const totalPages = new Array(Math.ceil(this.props.heroesAmount /
     this.heroesPerPage)).fill(0).map((value, index) => index + 1);
     let startPage = this.props.currentPage > totalPages.length - 2 ? this.props.currentPage -
@@ -37,7 +36,6 @@ class Pagination extends React.Component {
 }
 
 const mapStateToProps = state => {
-
     return(
         {
             heroesAmount: state.characters.heroes.filteredHeroes.total,

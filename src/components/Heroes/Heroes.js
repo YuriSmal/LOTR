@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, Route, Switch,  useRouteMatch, useParams, } from 'react-router-dom';
+import { Link, Route, Switch} from 'react-router-dom';
 import ParticularHero from './ParticularHero';
-import Pagination from './Pagination'
-
-import './Heroes.css'
+import Pagination from './Pagination';
+import './Heroes.css';
 import raceImg from './img/wristband-icon-31.png'
+
 class Heroes extends React.Component {
     constructor(props) {
         super(props);
