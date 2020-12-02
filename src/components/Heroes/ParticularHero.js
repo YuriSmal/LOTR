@@ -26,19 +26,19 @@ class ParticularHero extends React.Component {
                 <div  className="particular-hero-wrapper">
                   {item.name && (<p className="particular-hero-name">{item.name}</p>)}
                   <div className="particular-hero-text">
-                    {item.birth && (<p><span>Birth:</span> {item.birth}</p>)}
-                    {item.death && (<p><span>Death:</span> {item.death}</p>)}
-                    {item.gender && (<p><span>Gender:</span> {item.gender}</p>)}
-                    {item.hair && (<p><span>Hair:</span> {item.hair}</p>)}
-                    {item.height && (<p><span>Height:</span> {item.height}</p>)}
-                    {item.race && (<p><span>Race:</span> {item.race}</p>)}
-                    {item.realm && (<p><span>Realm:</span> {item.realm}</p>)}
-                    {item.spouse && (<p><span>Spouse:</span> {item.spouse}</p>)}
+                    {item.birth && item.birth !== "NaN" && (<p><span>Birth:</span> {item.birth}</p>)}
+                    {item.death && item.death !== "NaN" && (<p><span>Death:</span> {item.death}</p>)}
+                    {item.gender && item.gender !== "NaN" && (<p><span>Gender:</span> {item.gender}</p>)}
+                    {item.hair && item.hair !== "NaN" && (<p><span>Hair:</span> {item.hair}</p>)}
+                    {item.height && item.height !== "NaN" && (<p><span>Height:</span> {item.height}</p>)}
+                    {item.race && item.race !== "NaN" && (<p><span>Race:</span> {item.race}</p>)}
+                    {item.realm && item.realm !== "NaN" && (<p><span>Realm:</span> {item.realm}</p>)}
+                    {item.spouse && item.spouse !== "NaN" && (<p><span>Spouse:</span> {item.spouse}</p>)}
                   </div>
                 </div>
-                <div className="particular-hero-link">
-                  {item.wikiUrl && (<p><a href={item.wikiUrl} target="_blank">LOTR Wiki link</a></p>)}
-                </div>
+                {item.wikiUrl && (<div className="particular-hero-link">
+                 <p><a href={item.wikiUrl} target="_blank">LOTR Wiki link</a></p>
+                </div>)}
               </div>
               )
             })}

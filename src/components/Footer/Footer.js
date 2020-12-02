@@ -9,7 +9,7 @@ function Footer() {
             <div className="Footer_container">
                 <div className="Footer_links">
                 <Link className="Footer_link" to="/" >Home</Link>
-                <Link className="Footer_link" to="">About us</Link>
+                <Link className="Footer_link" to="/about">About us</Link>
                 <a className="Footer_link" href="https://the-one-api.dev/" target="_blank" >API</a>
                 </div>
                 <div className="Footer_copyright">

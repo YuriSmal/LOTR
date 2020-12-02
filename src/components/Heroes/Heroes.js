@@ -3,7 +3,12 @@ import { Link, Route, Switch} from 'react-router-dom';
 import ParticularHero from './ParticularHero';
 import Pagination from './Pagination';
 import './Heroes.css';
-import raceImg from './img/wristband-icon-31.png';
+import human from '../../images/heroes-icons/humans.png';
+import elf from '../../images/heroes-icons/elf.png';
+import dwarf from '../../images/heroes-icons/dwarf.jpg';
+import hobbit from '../../images/heroes-icons/hobbit.png';
+import orc from '../../images/heroes-icons/orc.png';
+import ring from '../../images/heroes-icons/ring.png';
 
 class Heroes extends React.Component {
     constructor(props) {
@@ -13,7 +18,6 @@ class Heroes extends React.Component {
             search: null,
             races: [],
             activeFilters: {},
-            raceimg : <img className ="heroes_img" src ={raceImg} />
         }
 
         this.showHeroes = this.showHeroes.bind(this);
@@ -109,16 +113,16 @@ class Heroes extends React.Component {
                         }
                     }).map(item => {
                         return(
-                            <Link  to={`/characters/${item._id}`}>
-                             <div className ="heroes_box" key={item._id} >
-                                 <div  >{this.state.raceimg}</div>
+                            <Link  to={`/characters/${item._id}`} key={item._id} >
+                             <div className ="heroes_box" >
+                                {(item.race === "Human" || item.race === "Men" || item.race === "Men,Wraith") && (<div><img className ="heroes_img" src ={human}/></div>)}
+                                {(item.race === "Elf" || item.race === "Elves") && (<div><img className ="heroes_img" src ={elf}/></div>)}
+                                {(item.race === "Dwarf" || item.race === "Dwarves") && (<div><img className ="heroes_img" src ={dwarf}/></div>)}
+                                {(item.race === "Hobbit" || item.race === "Hobbits") && (<div><img className ="heroes_img" src ={hobbit}/></div>)}
+                                {(item.race === "Orcs" || item.race === "Orc" || item.race === "Uruk-hai" || item.race === "Uruk-hai,Orc") && (<div><img className ="heroes_img" src ={orc}/></div>)}
                                 <h2 className ="heroes_name">{item.name}</h2>
                                 <p className ="heroes_race">{item.race}</p>
                                 <p className ="heroes_gender">{item.gender}</p>
-                                <div className = "heroes_link_box">
-                                   <p className ="heroes_link">See more</p> 
-                                </div>
-                               
                             </div>
                             </Link>
                         )

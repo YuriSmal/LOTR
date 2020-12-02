@@ -6,7 +6,12 @@
     opacity: 1;
   }
 }
-
+@font-face {
+  font-family: "Anirm";
+  src: url("../../fonts/Anirm/anirm___.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .heroes_Conatiner {
   max-width: 1400px;
   margin: 0 auto;
@@ -21,7 +26,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
 }
 .heroes_box {
   text-decoration: none;
@@ -44,7 +48,7 @@
   cursor: pointer;
 }
 
-.heroes_box:hover{
+.heroes_box:hover {
   background-color: rgba(255, 255, 255, 1);
   transform: scale(1.1);
   transition: 1s ease;
@@ -109,14 +113,14 @@
 }
 .heroes_race {
   text-decoration: none;
-  margin-top: 5px;
+  margin: 5px;
 }
 .heroes_gender {
   text-decoration: none;
   margin-top: 5px;
 }
 
-.heroes_kostyl{
+.heroes_kostyl {
   margin: 0 auto;
   max-width: 1400px;
   opacity: 0;
@@ -134,4 +138,8 @@
 .heroes-preloader {
   color: #fff;
 }
-
+.heroes_name {
+  font-family: "Anirm";
+  font-size: 18px;
+  margin: 10px 0;
+}
