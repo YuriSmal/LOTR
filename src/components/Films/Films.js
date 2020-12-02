@@ -22,7 +22,6 @@ class Film extends React.Component {
             img6:  <img className="movie-img_img" src={img6}/>,
         }
         this.showFilms = this.showFilms.bind(this);
-        this.imgFilm = this.imgFilm.bind(this);
     }
     
     componentDidMount()  {
@@ -45,12 +44,6 @@ class Film extends React.Component {
         }
     }
 
-    imgFilm(item){
-        if (item.name == "The Return of the King"){
-            this.setState({img:<img className="movie-img_img" src={img2}/>})
-        }
-    }
-
     showFilms() {
         if(this.props.films.docs) {
             return(
@@ -58,9 +51,12 @@ class Film extends React.Component {
                     if (this.state.search == null)
                         return data
                     else if (data.name.toLowerCase().includes(this.state.search.toLowerCase())) {
-                        return data
-                    }
-                    
+                        if (data.name.length > 0) {
+                            return data
+                        } else {
+                            return alert(1)
+                        }
+                    }                    
                 }).map(item => {
                     
                     if(item.name !== "The Lord of the Rings Series" &&  item.name !== "The Hobbit Series") {
@@ -76,7 +72,7 @@ class Film extends React.Component {
                                      <div className="movie-score"><p>{item.rottenTomatesScore}</p></div>
                                 </div>
                                 <div className="movie-info-wrapper">
-                                    <a className='film-link'>
+                                    <a className='film-link' href>
                                     <h2 className="movie-title">{item.name}</h2>
                                     </a>
                                     

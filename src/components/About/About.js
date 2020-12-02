@@ -17,7 +17,7 @@ function AboutUs(props) {
                         <div className="about-dude-img about-dude-img-yurii"></div>
                         <div className="about-dude-info">
                             <h2 className="about-dude-name">Yurii Smal'</h2>
-                            <p className="about-dude-about-text">Doter</p>
+                            {/* <p className="about-dude-about-text">Doter</p> */}
                             <div className="about-dude-social-container">
                                 <a className="about-dude-social-wrapper about-dude-social-btn" href="https://www.linkedin.com/in/yurii-smal-74570319a/" target="_blank">
                                     <FontAwesomeIcon className="about-fa-icon" icon={faLinkedin}/>
@@ -33,7 +33,7 @@ function AboutUs(props) {
                         <div className="about-dude-img about-dude-img-vito"></div>
                         <div className="about-dude-info">
                             <h2 className="about-dude-name">Vitalii Yakovyshyn</h2>
-                            <p className="about-dude-about-text">Doter</p>
+                            {/* <p className="about-dude-about-text">Doter</p> */}
                             <div className="about-dude-social-container">
                                 <a className="about-dude-social-wrapper about-dude-social-btn" href="https://www.linkedin.com/in/yurii-smal-74570319a/" target="_blank">
                                     <FontAwesomeIcon className="about-fa-icon" icon={faLinkedin}/>
