@@ -16,7 +16,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 15px 0px 15px 0px;
+   
   }
 }
 #Header.active {
@@ -50,7 +50,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 61px;
+    top:40px;
     right: 20px;
     width: 40px;
     height: 40px;
@@ -112,6 +112,7 @@
 #Header .logo_995px .logo_text {
   font-weight: 100;
   margin-left: 5px;
+  line-height: 1.2;
   color: white;
   font-family: "Anirm";
 }
@@ -202,8 +203,8 @@
     font-size: 18px;
   }
   #Header .logo_995px {
-    margin-top: 35px;
-    padding-left: 15px;
+    margin-top:0px;
+   
   }
   #Header .logo_995px .logo_img {
     width: 56px;
@@ -212,8 +213,16 @@
     background-repeat: no-repeat;
   }
   #Header .logo_995px .logo_text {
-    margin-left: 9px;
+  
     width: 236px;
     height: 36px;
+  }
+  
+}
+
+@media screen and (max-width: 430px) {
+  #Header .logo_995px .logo_text {
+  font-size: 20px;
+  max-width: 150px;
   }
 }

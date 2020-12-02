@@ -1,3 +1,35 @@
+@keyframes leftAnimation {
+  0% {
+    opacity: 0;
+    left: -150px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+@keyframes rightAnimation {
+  0% {
+    right: -150px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+
+.yurii_left{
+  position: relative;
+  animation: leftAnimation 1s ease ;
+  animation-fill-mode: forwards;
+}
+.vito_right{
+  position: relative;
+  animation: rightAnimation 1s ease ;
+  animation-fill-mode: forwards;
+}
 .about-container {
   display: flex;
   flex-direction: column;
@@ -15,7 +47,7 @@
 }
 .about-title {
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 70px;
 }
 .about-dude-img-yurii {
   background: url("../../images/about-img-yurii.jpg");
@@ -75,4 +107,20 @@
   color: #fff;
   border: 1px solid #fff;
   transition: 0.4s;
+}
+@media screen and (max-width: 760px) {
+  .about-dude-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .about-dude-img-vito {
+    margin-top: 20px;
+    background: url("../../images/about-img-vito.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
 }

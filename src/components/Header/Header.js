@@ -10,7 +10,7 @@ function Header() {
                 <Link className="logo_wrapper" to='/'>
                     <div className = "logo_995px">
                         <div className="logo_img"></div>
-                        <h1 className="logo_text">Lords Of The React </h1>
+                        <h1 className="logo_text">The Lords Of The React </h1>
                     </div>
                 </Link>
                 <input id="menu__toggle" type="checkbox" />
