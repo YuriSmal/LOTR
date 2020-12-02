@@ -17,7 +17,7 @@ function MainContainer(props) {
           <Route exact path="/about" component={AboutUs} />
           <div   className="Main-Container_section">
             <h1 className="Main-Container_title">Welcome to the <span>Lords of React</span> (no) website</h1>
-            <p className="Main-Container_text">Welcome to our React project.Use the menu to view the required information</p>
+            <p className="Main-Container_text">Welcome to our React project. Use the menu to view the required information</p>
           </div>
         </Switch>
       </div>

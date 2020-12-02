@@ -13,7 +13,7 @@ function AboutUs(props) {
             <div className="about-container">
                 <h1 className="about-title">Who we are?</h1>
                 <div className="about-dude-wrapper">
-                    <div className="about-dude about-yurii">
+                    <div className="about-dude about-yurii yurii_left">
                         <div className="about-dude-img about-dude-img-yurii"></div>
                         <div className="about-dude-info">
                             <h2 className="about-dude-name">Yurii Smal'</h2>
@@ -29,7 +29,7 @@ function AboutUs(props) {
                             </div>
                         </div>
                     </div>
-                    <div className="about-dude about-vito">
+                    <div className="about-dude about-vito vito_right">
                         <div className="about-dude-img about-dude-img-vito"></div>
                         <div className="about-dude-info">
                             <h2 className="about-dude-name">Vitalii Yakovyshyn</h2>
