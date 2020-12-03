@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
-   
     return (
         <div id="Header">
             <div className = "hamburger-menu">
@@ -13,7 +12,7 @@ function Header() {
                         <h1 className="logo_text">The Lords Of The React </h1>
                     </div>
                 </Link>
-                <input id="menu__toggle" type="checkbox" />
+                <input id="menu__toggle" onClick={() => {}} type="checkbox" />
                 <label className="menu__btn" htmlFor="menu__toggle">
                 <span></span>
                 </label>

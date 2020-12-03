@@ -1,8 +1,7 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { getBookFunc, } from '../actions/books'
-import Books from '../components/Books/Book'
-import { books } from '../reducers'
+import React from 'react';
+import { connect } from 'react-redux';
+import { getBookFunc, } from '../actions/books';
+import Books from '../components/Books/Book';
 
 const BooksContainer = ({ books, getBookInfo,}) => (
     <Books

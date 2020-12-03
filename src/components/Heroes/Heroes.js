@@ -8,7 +8,6 @@ import elf from '../../images/heroes-icons/elf.png';
 import dwarf from '../../images/heroes-icons/dwarf.jpg';
 import hobbit from '../../images/heroes-icons/hobbit.png';
 import orc from '../../images/heroes-icons/orc.png';
-import ring from '../../images/heroes-icons/ring.png';
 
 class Heroes extends React.Component {
     constructor(props) {

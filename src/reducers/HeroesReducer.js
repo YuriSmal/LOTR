@@ -16,7 +16,7 @@ const initialState = {
         error: false,
         data: {docs: []},
         filteredHeroes: {docs: []},
-        currentPage: 0
+        currentPage: 0,
     },
     particularHero: {
         isLoading: false,

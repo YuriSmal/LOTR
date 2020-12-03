@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getFilmsFunc, addScoreFilter, removeScoreFilter } from '../actions/Films';
+import { getFilmsFunc } from '../actions/Films';
 import Films from '../components/Films/Films';
-import { films } from '../reducers';
 
 const FilmsContainer = ({ films, getFilmsInfo, search,}) => (
     <Films

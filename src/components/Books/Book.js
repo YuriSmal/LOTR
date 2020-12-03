@@ -12,9 +12,9 @@ class Book extends React.Component {
 
         this.state = {
             search: null,
-            book1 : <img className="book-img_img" src={book1}/>,
-            book2 : <img className="book-img_img" src={book2}/>,
-            book3 : <img className="book-img_img" src={book3}/>
+            book1 : <img className="book-img_img" src={book1} alt=""/>,
+            book2 : <img className="book-img_img" src={book2} alt=""/>,
+            book3 : <img className="book-img_img" src={book3} alt=""/>
         }
         this.showBooks = this.showBooks.bind(this)
         this.showParticularBook = this.showParticularBook.bind(this)
@@ -66,13 +66,6 @@ class Book extends React.Component {
         
             return(
                 <div className="book-wrapper">
-                    {/* <div className="search-filter-wrapper">
-                    <input className="search-filter"
-                        type='text' 
-                        placeholder='Search by title...' 
-                        onChange={(e) => this.searchItem(e)} 
-                    />
-                    </div> */}
                     <div className="book-wrapper">
                         {this.showBooks()}
                     </div>

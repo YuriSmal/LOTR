@@ -14,12 +14,12 @@ class Film extends React.Component {
 
         this.state = {
             search: null,
-            img:  <img className="movie-img_img" src={img1}/>,
-            img2:  <img className="movie-img_img" src={img2}/>,
-            img3:  <img className="movie-img_img" src={img3}/>,
-            img4:  <img className="movie-img_img" src={img4}/>,
-            img5:  <img className="movie-img_img" src={img5}/>,
-            img6:  <img className="movie-img_img" src={img6}/>,
+            img:  <img className="movie-img_img" src={img1} alt=""/>,
+            img2:  <img className="movie-img_img" src={img2} alt=""/>,
+            img3:  <img className="movie-img_img" src={img3} alt=""/>,
+            img4:  <img className="movie-img_img" src={img4} alt=""/>,
+            img5:  <img className="movie-img_img" src={img5} alt=""/>,
+            img6:  <img className="movie-img_img" src={img6} alt=""/>,
         }
         this.showFilms = this.showFilms.bind(this);
     }
@@ -69,15 +69,13 @@ class Film extends React.Component {
                                 {item.name === "The Unexpected Journey" && (<div >{this.state.img4}</div>)}
                                 {item.name === "The Desolation of Smaug" && (<div >{this.state.img5}</div>)}
                                 {item.name === "The Battle of the Five Armies" && (<div >{this.state.img6}</div>)}
-                                     <div className="movie-score"><p>{item.rottenTomatesScore}</p></div>
+                                     <div className="movie-score" data-tooltip="Rotten Tomatoes Score"><p>{item.rottenTomatesScore}</p></div>
                                 </div>
                                 <div className="movie-info-wrapper">
-                                    <a className='film-link' href>
                                     <h2 className="movie-title">{item.name}</h2>
-                                    </a>
-                                    
-                                    <div className="movie-budget"><p>Budget: ${item.budgetInMillions} MM</p></div>
-                                    <div className="movie-revenue"><p>Revenue: ${item.boxOfficeRevenueInMillions} MM</p></div> 
+                                    <div className="movie-budget"><p><span>Budget:</span> ${item.budgetInMillions} MM</p></div>
+                                    <div className="movie-revenue"><p><span>Revenue:</span> ${item.boxOfficeRevenueInMillions} MM</p></div> 
+                                    <div className="movie-awards"><p><span>Academy Awards Won:</span> {item.academyAwardWins}</p></div> 
                                 </div>  
                             </div>
                         )
