@@ -1,10 +1,9 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { getBookFunc } from '../actions/books'
-import Books from '../components/Books/Books'
-import { books } from '../reducers'
+import React from 'react';
+import { connect } from 'react-redux';
+import { getBookFunc, } from '../actions/books';
+import Books from '../components/Books/Book';
 
-const BooksContainer = ({ books, getBookInfo }) => (
+const BooksContainer = ({ books, getBookInfo,}) => (
     <Books
         books={books}
         getBookInfo={getBookInfo}
@@ -17,7 +16,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => {
     return {
-        getBookInfo: getBookFunc(dispatch)
+        getBookInfo: getBookFunc(dispatch),
+
     }
 };
 
